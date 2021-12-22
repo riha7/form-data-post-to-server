@@ -12,8 +12,9 @@ class Form extends React.Component {
     };
   }
   handleInput = (e) => {
+    const { name, value } = e.target;
     this.setState({
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
   };
   submitHandler = (e) => {
@@ -59,7 +60,7 @@ class Form extends React.Component {
               alt="loader"
               height="50px"
               width="50px"
-              style={{ background: 'green' }}
+              style={{ background: 'orange', color: 'white' }}
             />
           )}
         </p>
